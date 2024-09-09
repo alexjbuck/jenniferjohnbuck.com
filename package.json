@@ -1,0 +1,14 @@
+{
+  "name": "jenniferjohnbuck.com",
+  "version": "1.0.0",
+  "description": "personal website",
+  "main": "index.html",
+  "repository": "git@github.com:alexjbuck/jenniferjohnbuck.com.git",
+  "author": "alexjbuck <alexjbuck@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "deploy": "aws s3 sync . s3://jenniferjohnbuck.com --delete --exclude '.git/*' --exclude '.gitignore' --exclude 'README.md' --exclude 'package.json'",
+    "preview": "python3 -m http.server 8000"
+  }
+}
